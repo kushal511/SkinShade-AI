@@ -7,7 +7,9 @@ SkinShade AI detects a face, isolates skin pixels robustly under varied lighting
 Overview
 
 Problem. Skintone-aware UIs (cosmetics try-ons, avatar creators, accessibility themes) often fail under changing illumination and busy backgrounds.
+
 Solution. Separate illumination from color, focus strictly on the facial region, and compute tone and palette from skin-only pixels.
+
 Outcome. Consistent tone labels and palettes across common lighting conditions, surfaced instantly via a lightweight interactive UI.
 
 What the system does
