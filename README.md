@@ -24,16 +24,6 @@ Generates a 5-color palette (base, neutral, complement, two analogs) as hex swat
 
 Runs live in a minimal UI (Gradio), with a small tone component exported to TensorFlow Lite for portable CPU inference.
 
-System at a glance
-Input image
-   └─▶ MTCNN (face detection & crop)
-         └─▶ HSV convert → SV-threshold skin mask
-               └─▶ KMeans on masked pixels → dominant skin centroid (HSV/RGB)
-                     └─▶ Tone mapping (Light / Medium / Dark)
-                           └─▶ 5-color palette generator (HEX)
-                                 └─▶ UI renders tone + swatches
-
-
 Why this design works
 
 HSV decouples brightness (V) from color → more stable than raw RGB under real lighting.
